@@ -22,7 +22,7 @@ class CreateTripsTable extends Migration
             $table->text('thumb');
             $table->integer('nights');
             $table->string('transport');
-            $table->boolean('free cancellation');
+            $table->boolean('free_cancellation');
             $table->integer('discount');
             $table->timestamps();
         });

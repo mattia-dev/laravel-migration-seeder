@@ -14,3 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index');
+
+Route::get('discounted', 'DiscountedController@index');
+
+Route::get('low-price', 'LowPriceController@index');
+
+Route::get('trip/{id}', 'TripController@index');

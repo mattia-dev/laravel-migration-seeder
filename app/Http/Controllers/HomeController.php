@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index() {
         $allTrips = Trip::all();
-        // $filteredTrips = Trip::where('price', '<', 300)->get();
+        $filteredTrips = Trip::where('price', '<', 400)->get();
         return view('welcome', compact('allTrips'));
     }
 }

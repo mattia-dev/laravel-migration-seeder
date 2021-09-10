@@ -7,36 +7,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,400,600,800" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
-    <title>Trip Agency</title>
+    <title>Trip Agency | Ecomic Trips</title>
 </head>
 <body>
     <div class="container">
-        <h1>LOW PRICE TRIPS</h1>
+        <h1>DISCOUNTED TRIPS</h1>
+
+        @include('templates/navbar')
 
         <ul>
             @foreach($lowPriceTrips as $trip)
                 <li class="card">
-                    <h2>{{ $trip->label }}</h3>
-
-                    <img src="{{ $trip->thumb }}" alt="{{ $trip->destination }} image">
-
-                    <div>
-                        <span class="destination">{{ $trip->destination }}</span><span> - {{ $trip->description }}</span>
-                    </div>
-
-                    <div class="price-info">
-                        <span>Price for {{ $trip->nights }} nights: {{ $trip->price }}$</span>
-
-                        @if($trip->discount > 0)
+                        <a href="http://127.0.0.1:8000/trip/{{ $trip->id }}">
+                        <h2>{{ $trip->label }}</h3>
+                        
+                        <img src="{{ $trip->thumb }}" alt="{{ $trip->destination }} image">
+                        
+                        <div>
+                            <span class="destination">{{ $trip->destination }}</span><span> - {{ $trip->description }}</span>
+                        </div>
+                        
+                        <div class="price-info">
+                            <span>Price for {{ $trip->nights }} nights: {{ $trip->price }}$</span>
+                            
+                            @if($trip->discount > 0)
                             <span> - Discount: <span class="discount">-{{$trip->discount}}%</span></span>
-                        @endif
-
-                        @if($trip->free_cancellation)
+                            @endif
+                            
+                            @if($trip->free_cancellation)
                             <span> - <span class="cancellation">FREE CANCELLATION</span></span>
-                        @endif
-                    </div>
-
-                    <div>Transport: {{ $trip->transport }}</div>
+                            @endif
+                        </div>
+                        
+                        <div>Transport: {{ $trip->transport }}</div>
+                    </a>
                 </li>
             @endforeach
         </ul>

@@ -7,11 +7,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,400,600,800" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
-    <title>Trip Agency</title>
+    <title>Trip Agency | Home</title>
 </head>
 <body>
     <div class="container">
         <h1>ALL TRIPS</h1>
+
+        @include('templates/navbar')
 
         <ul>
             @foreach($allTrips as $trip)

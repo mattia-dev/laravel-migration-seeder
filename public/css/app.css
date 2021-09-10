@@ -15,6 +15,7 @@ h1 {
 a {
   text-decoration: none;
   color: black;
+  transition: 0.25s;
 }
 
 .container {
@@ -34,6 +35,22 @@ a {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  padding: 12 24px;
+}
+
+.container ul.navbar li {
+  width: calc(100% / 3);
+  padding: 24px;
+  text-align: center;
+  transition: 0.25s;
+}
+
+.container ul.navbar li:hover {
+  background-color: teal;
+}
+
+.container ul.navbar li:hover a {
+  color: white;
 }
 
 .container ul li {

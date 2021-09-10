@@ -7,9 +7,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,400,600,800" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
-    <title>{{ $trip->label }}</title>
+    <title>Trip Agency | {{ $trip->label }}</title>
 </head>
 <body>
+    <div class="container">
+        @include('templates/navbar')
+    </div>
+
     <div class="container trip-page">
         <h1>{{ $trip->label }}</h1>
         <img src="{{ $trip->thumb }}" alt="{{ $trip->destination }} image">

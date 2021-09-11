@@ -10,11 +10,9 @@
     <title>Trip Agency | {{ $trip->label }}</title>
 </head>
 <body>
-    <div class="container">
-        @include('templates/navbar')
-    </div>
-
     <div class="container trip-page">
+        @include('templates/navbar')
+    
         <h1>{{ $trip->label }}</h1>
         <img src="{{ $trip->thumb }}" alt="{{ $trip->destination }} image">
         <div>{{ $trip->description }}</div>

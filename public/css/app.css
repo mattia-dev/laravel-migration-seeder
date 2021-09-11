@@ -18,6 +18,10 @@ a {
   transition: 0.25s;
 }
 
+nav {
+  margin: 18px 24px 12px 24px;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -27,30 +31,41 @@ a {
   text-align: center;
 }
 
-.container.trip-page img {
+.container.trip-page nav,
+.container.trip-page h1,
+.container.trip-page img,
+.container.trip-page div {
   width: 80%;
+  text-align: center;
+  margin: 12px auto;
 }
 
 .container ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  padding: 12 24px;
 }
 
 .container ul.navbar li {
   width: calc(100% / 3);
-  padding: 24px;
+  padding: 0;
   text-align: center;
   transition: 0.25s;
+  border-bottom: 5px solid white;
 }
 
 .container ul.navbar li:hover {
-  background-color: teal;
+  border-bottom: 5px solid teal;
 }
 
 .container ul.navbar li:hover a {
-  color: white;
+  color: teal;
+}
+
+.container ul.navbar a {
+  display: block;
+  width: 100%;
+  padding: 24px 0;
 }
 
 .container ul li {

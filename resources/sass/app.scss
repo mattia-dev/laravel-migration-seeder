@@ -18,6 +18,10 @@ a {
     transition: .25s;
 }
 
+nav {
+    margin: 18px 24px 12px 24px;
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -25,8 +29,10 @@ a {
     &.trip-page {
         text-align: center;
 
-        img {
+        nav, h1, img, div {
             width: 80%;
+            text-align: center;
+            margin: 12px auto;
         }
     }
 
@@ -34,21 +40,27 @@ a {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-        padding: 12 24px;
 
         &.navbar li {
             width: calc(100% / 3);
-            padding: 24px;
+            padding: 0;
             text-align: center;
             transition: .25s;
+            border-bottom: 5px solid white;
 
             &:hover {
-                background-color: teal;
+                border-bottom: 5px solid teal;
             }
 
             &:hover a {
-                color: white;
+                color: teal;
             }
+        }
+
+        &.navbar a {
+            display: block;
+            width: 100%;
+            padding: 24px 0;
         }
 
         li {

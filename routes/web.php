@@ -20,3 +20,5 @@ Route::get('discounted', 'DiscountedController@index');
 Route::get('low-price', 'LowPriceController@index');
 
 Route::get('trip/{id}', 'TripController@index');
+
+Route::get('trip/{id}/book', 'TripBookingController@index');

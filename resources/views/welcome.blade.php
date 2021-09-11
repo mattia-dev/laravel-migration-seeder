@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>ALL TRIPS</h1>
+        <h1>EXPLORE ALL TRIPS</h1>
 
         @include('templates/navbar')
 

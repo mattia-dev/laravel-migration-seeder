@@ -16,6 +16,8 @@
         <h1>{{ $trip->label }}</h1>
         <img src="{{ $trip->thumb }}" alt="{{ $trip->destination }} image">
         <div>{{ $trip->description }}</div>
+
+        <a href="http://127.0.0.1:8000/trip/{id}/book"><button>BOOK NOW</button></a>
     </div>
 </body>
 </html>

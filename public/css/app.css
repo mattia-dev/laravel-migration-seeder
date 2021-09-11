@@ -6,10 +6,15 @@
 
 body {
   font-family: "Nunito", sans-serif;
+  background-image: url("https://wallpaperaccess.com/full/136008.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 24px 0;
 }
 
 h1 {
   margin-left: 24px;
+  color: teal;
 }
 
 a {
@@ -25,10 +30,14 @@ nav {
 .container {
   max-width: 1100px;
   margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 1001;
+  padding-top: 24px;
 }
 
 .container.trip-page {
   text-align: center;
+  padding: 12px 0;
 }
 
 .container.trip-page nav,
@@ -40,6 +49,22 @@ nav {
   margin: 12px auto;
 }
 
+.container.trip-page button {
+  cursor: pointer;
+  width: 150px;
+  margin: 12px 0;
+  padding: 12px 24px;
+  border: 3px solid teal;
+  font-weight: bold;
+  color: teal;
+  transition: 0.25s;
+}
+
+.container.trip-page button:hover {
+  background-color: teal;
+  color: white;
+}
+
 .container ul {
   list-style: none;
   display: flex;
@@ -48,24 +73,26 @@ nav {
 
 .container ul.navbar li {
   width: calc(100% / 3);
-  padding: 0;
+  padding: 0 12px;
   text-align: center;
   transition: 0.25s;
-  border-bottom: 5px solid white;
 }
 
-.container ul.navbar li:hover {
+.container ul.navbar li.active a {
   border-bottom: 5px solid teal;
+  color: teal;
 }
 
 .container ul.navbar li:hover a {
   color: teal;
+  border-bottom: 5px solid teal;
 }
 
 .container ul.navbar a {
   display: block;
   width: 100%;
   padding: 24px 0;
+  border-bottom: 5px solid rgba(255, 255, 255, 0);
 }
 
 .container ul li {
